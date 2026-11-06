@@ -19,7 +19,7 @@ The branch is based on `main` at `6ac0348555050a99bcf4f08ff8bf920616482289`. Thi
 1. Enumerated every developer branch, excluding `main` and the newly created `finalpool`.
 2. Located the latest commit on each branch that changes task files, using commit history to distinguish task development from setup/merge commits. Reviewed the 29 tasks named by those latest development commits, including updates to previously created tasks.
 3. Reconciled those tasks with existing Task Tracker pages by task name and developer, adding 29 missing pages without duplicating existing entries.
-4. Also verified the 75 pre-existing tracker pages against their developer's latest task-development commit. Corrected 46 stale `implemented` statuses to `implementing` because required files were absent.
+4. Verified the 75 pre-existing tracker pages against their developer's latest task-development commit. Corrected 46 stale `implemented` statuses to `implementing` because required files were absent. An additional 12 repository-only task directories were examined while checking eligibility; they are listed separately in the manifest and were not added to the tracker reconciliation.
 5. Promote only tasks verified as `implemented` after the update. At this check, no tasks qualify, so `tasks/finalpool` initially contains this explanation and a machine-readable manifest. An empty implementation pool is intentional; incomplete implementations have not been copied.
 
 ## Requirements checked
@@ -34,14 +34,14 @@ The requirements come from `tasks/examples/example-task`, especially `readme.txt
 - `initial_workspace` and `groundtruth_workspace` are optional directories; their contents may be placeholders.
 - Beyond these explicit content requirements, only file/directory existence was checked. Task code was not executed, and no further functional requirements were imposed.
 
-Every one of the 104 reviewed tracker tasks is missing its `task_config.json`. Additional non-English documentation was found in some tasks, but the missing configuration alone prevents qualification. Placeholder scripts/content are not themselves failures when the example marks them optional. Unnamed files directly under `tasks/yuxuan/` in its latest commit are not an additional named task.
+All 116 repository task directories checked lack their required `task_config.json`. This includes all 104 Task Tracker tasks. Additional non-English documentation was found in some tasks, but the missing configuration alone prevents qualification. Placeholder scripts/content are not themselves failures when the example marks them optional. Unnamed files directly under `tasks/yuxuan/` in its latest commit are not an additional named task.
 
 ## Latest development commits reviewed
 
 All commit identifiers below are complete hashes. The manifest maps each developer to their reviewed commit; task names are listed in this table. Newly created Task Tracker pages also contain the source path, commit, eligibility decision, and rationale.
 
 | Developer branch | Commit | Task(s) named in latest development commit |
-| --- | --- | --- | --- |
+| --- | --- | --- |
 | fan-dev | 8b90f34538e4e106eba103265efaa9a456be498c | loyalty-program; discount-calculator |
 | gyy | 9612ffff37072726292c77df0f4c6db2f8df1bbb | tag-manager; sitemap-generator; robots-handler |
 | haoze | e0072cf979548c56984072cd76f529c7beea59b2 | media-organizer; streaming-service |
@@ -64,6 +64,7 @@ All commit identifiers below are complete hashes. The manifest maps each develop
 - New Task Tracker pages: 29, all `implementing`.
 - Existing Task Tracker pages corrected: 46, from `implemented` to `implementing`.
 - Total tracker tasks verified: 104.
+- Additional repository-only task directories checked: 12 (116 total directory checks).
 - Implemented tasks eligible for this initial pool: 0.
 
 The manifest records the source paths and exact reviewed commits, so tasks can be checked and promoted when their developers supply the missing requirements. The eligible-task list must be regenerated from the updated tracker for subsequent pool revisions.
