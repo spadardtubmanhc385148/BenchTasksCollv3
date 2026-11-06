@@ -38,10 +38,10 @@ Every one of the 104 reviewed tracker tasks is missing its `task_config.json`. A
 
 ## Latest development commits reviewed
 
-Dates are commit timestamps, UTC. Each commit's task list and file-level检查结果 are recorded in `pool_manifest.json` and the corresponding Task Tracker page.
+All commit identifiers below are complete hashes. The manifest maps each developer to their reviewed commit; task names are listed in this table. Newly created Task Tracker pages also contain the source path, commit, eligibility decision, and rationale.
 
 | Developer branch | Commit | Task(s) named in latest development commit |
-| --- | --- | --- |
+| --- | --- | --- | --- |
 | fan-dev | 8b90f34538e4e106eba103265efaa9a456be498c | loyalty-program; discount-calculator |
 | gyy | 9612ffff37072726292c77df0f4c6db2f8df1bbb | tag-manager; sitemap-generator; robots-handler |
 | haoze | e0072cf979548c56984072cd76f529c7beea59b2 | media-organizer; streaming-service |
