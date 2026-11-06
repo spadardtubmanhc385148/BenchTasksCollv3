@@ -10,7 +10,7 @@
 Please set a saperate branch for yourselves in for development. Do not push to master directly without notification, thanks!
 
 #### About Proxy
-Please see `FAQs/setup_proxy.md` to see how to set up a proxy for your terminal/cmd. I only provide some general guides, so you may need extra effort to solve the proxy issue, e.g. via Google Search and asking LLMs.
+Please see `FAQs/setup_proxy.md` to see how to set up a proxy for your terminal/cmd. I only provide some general guides, so you may need extra effort to solve this issue, e.g. via Google Search and asking LLMs.
 
 You may need to configure some proxies for your MCP servers, e.g. `configs/mcp_servers/playwright.yaml`. You just need to uncomment the corresponding lines, the code will automatically load proxy from `configs/global_configs.py`.
 
@@ -72,4 +72,8 @@ see `scripts/dev.sh`
 
 see `framework_overview.md`, it contains the information you needed to add a new task. Also, it can help you better understand the structure of this evaluation benchmark.
 
+## Final pool
 
+See [tasks/finalpool/README.md](tasks/finalpool/README.md) for the Task Tracker reconciliation and eligibility audit, and [tasks/finalpool/pool_manifest.json](tasks/finalpool/pool_manifest.json) for the machine-readable record.
+
+This branch is based on `main` at `6ac0348555050a99bcf4f08ff8bf920616482289`. No task implementations met the documented requirements at audit time, so the initial pool contains audit records rather than incomplete implementations.
